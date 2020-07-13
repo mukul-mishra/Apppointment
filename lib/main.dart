@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:Appointment_App/welcome_screen.dart';
+import 'package:Appointment_App/login_screens/Appointer.dart';
+import 'package:Appointment_App/login_screens/Appointee.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,6 +18,10 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: WelcomeScreen(),
+      routes: {
+        'Appointer': (context) => AppointerScreen(),
+        'Appointee': (context) => AppointeeScreen(),
+      },
     );
   }
 }

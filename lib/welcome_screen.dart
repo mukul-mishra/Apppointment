@@ -1,5 +1,5 @@
 //import 'package:Appointment_App/login_screens/Appointer.dart';
-import 'package:Appointment_App/login_screens/Appointee.dart';
+//import 'package:Appointment_App/login_screens/Appointee.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
@@ -12,11 +12,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     with SingleTickerProviderStateMixin {
   AnimationController controller;
   Animation animation;
-  void loginPageAppointer(BuildContext ctx) {
-    Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return AppointeeScreen();
-    }));
-  }
 
   @override
   void initState() {
@@ -48,9 +43,22 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: <Widget>[
+          FloatingActionButton(
+              heroTag: 'btn1',
+              child: Text('+'),
+              onPressed: () {
+                Navigator.pushNamed(context, 'Appointer');
+              })
+        ],
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        onPressed: () => loginPageAppointer(context),
+        heroTag: 'btn2',
+        onPressed: () {
+          Navigator.pushNamed(context, 'Appointee');
+        },
         backgroundColor: Colors.green,
         child: Text('+'),
       ),
