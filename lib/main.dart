@@ -1,3 +1,5 @@
+//import 'package:Appointment_App/Appointer_form.dart';
+import 'package:Appointment_App/login_screens/login_console_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:Appointment_App/welcome_screen.dart';
 import 'package:Appointment_App/login_screens/Appointer.dart';
@@ -21,6 +23,8 @@ class MyApp extends StatelessWidget {
       routes: {
         'Appointer': (context) => AppointerScreen(),
         'Appointee': (context) => AppointeeScreen(),
+        'login_console': (context) => LoginConsoleScreen(),
+        //'AppointerSignup': (context) => AuthForm(),
       },
     );
   }

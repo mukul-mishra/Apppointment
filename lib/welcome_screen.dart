@@ -43,21 +43,11 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: <Widget>[
-          FloatingActionButton(
-              heroTag: 'btn1',
-              child: Text('+'),
-              onPressed: () {
-                Navigator.pushNamed(context, 'Appointer');
-              })
-        ],
-      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        heroTag: 'btn2',
+        heroTag: 'btn1',
         onPressed: () {
-          Navigator.pushNamed(context, 'Appointee');
+          Navigator.pushNamed(context, 'login_console');
         },
         backgroundColor: Colors.green,
         child: Text('+'),
