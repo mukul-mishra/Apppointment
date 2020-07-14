@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class AuthForm extends StatefulWidget {
+class AuthFormAppointer extends StatefulWidget {
   @override
-  _AuthFormState createState() => _AuthFormState();
+  _AuthFormAppointerState createState() => _AuthFormAppointerState();
 }
 
-class _AuthFormState extends State<AuthForm> {
+class _AuthFormAppointerState extends State<AuthFormAppointer> {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {

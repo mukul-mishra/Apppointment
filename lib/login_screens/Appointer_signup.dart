@@ -43,7 +43,7 @@ class _AppointerScreenState extends State<AppointerScreen> {
             )
           ],
         ),
-        AuthForm(),
+        AuthFormAppointer(),
       ].reversed.toList(),
     ));
   }
